@@ -21,3 +21,6 @@ pull 추가
 
 협업
 push.egoing
+
+협업
+pull.sub
