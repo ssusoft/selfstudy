@@ -1,5 +1,1 @@
-#include <stdio.h>
-int main(){
-	printf("Hello World\n");
-	return 0;
-}
+이것은 실험입니다.
