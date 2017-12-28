@@ -25,5 +25,5 @@ push.egoing
 협업
 pull.sub
 
-민식이는 잘생겼어요.
+민식이의 얼굴은 심장을 충돌시켜요.
 good!
