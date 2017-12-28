@@ -24,3 +24,6 @@ push.egoing
 
 협업
 pull.sub
+
+민식이는 잘생겼어요.
+good!
