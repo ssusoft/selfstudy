@@ -1,0 +1,48 @@
+// 이창규
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define REPEAT_COUNT 10000
+
+void dual(char * a, char * b);
+
+int main(){
+    char * a = (char *)malloc(sizeof(char) * 4);
+    char * b = (char *)malloc(sizeof(char) * 4);
+    scanf("%s %s", a, b); // 000
+    dual(a, b);
+    return 0;
+}
+
+void dual(char * a, char * b){
+    char random[100000];
+    char * start = random;
+    int a_count = 0, b_count = 0;
+    srand(time(1));
+    for(int i=0; i<REPEAT_COUNT; i++){
+        start = random;
+        memset(random, -1, REPEAT_COUNT - 1);
+        for(int j=0; ; j++){
+            random[j] = (rand() % 2) + 48; // 0 아니면 1 나옴.
+            random[j+1] = '\0';
+
+            if(strlen(random) < 3) continue;
+            if(strstr(random, a)){
+//                printf("i : %d\n", i);
+//                printf("random : %s\n", random);
+                a_count++;
+                break;
+            }
+            if(strstr(random, b)){
+//                printf("i : %d\n", i);
+//                printf("random : %s\n", random);
+                b_count++;
+                break;
+            }
+        }
+    }
+    printf("a : %d\n", a_count);
+    printf("b : %d\n", b_count);
+}
